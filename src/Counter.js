@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Counter.css';
 
 const Counter = (props) => {
-    let [counter, setCounter] = useState(42);
+    let [counter, setCounter] = useState(props.startValue);
 
     const buttonClickHandler = () => {
         setCounter(counter+1);
