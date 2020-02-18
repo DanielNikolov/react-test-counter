@@ -4,7 +4,7 @@ const InputControl = (props) => {
 
     return (
         <div className="control">
-            <input type="text" />
+            <input type="text" onChange={props.changed} onKeyPress={props.changed} />
         </div>
     )
 }
