@@ -32,10 +32,17 @@ const Wrapper = () => {
         debouncedFetchDataHandler();
     }
 
+    const itemClickHandler = (itemIndex) => {
+        console.log(`Clicked on ${itemIndex} item`);
+    }
+
     return (
         <div className="wrapper">
-            <InputControl changed={fetchDataHandler} />
-            { items.length > 0 ? <ListItems items={items} /> : null }
+            <InputControl changed={fetchDataHandler} itemsCount={items.length} />
+            { items.length > 0 ?
+                <ListItems
+                    items={items}
+                    itemClicked = {itemClickHandler} /> : null }
         </div>
     );
 }

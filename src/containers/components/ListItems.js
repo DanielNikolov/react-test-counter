@@ -5,7 +5,7 @@ const ListItems = (props) => {
         return (
             <div key={index}
                 className="list-item">
-                <a href={item}>{item}</a>
+                <a href={item} onClick={() => {props.itemClicked(index)}}>{item}</a>
             </div>
         )
     });
