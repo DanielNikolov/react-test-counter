@@ -42,7 +42,7 @@ const Wrapper = () => {
             { items.length > 0 ?
                 <ListItems
                     items={items}
-                    itemClicked = {itemClickHandler} /> : null }
+                    onSelectItem={itemClickHandler} /> : null }
         </div>
     );
 }
